@@ -6,6 +6,8 @@ A lightweight CSS framework built with Sass. Clean, simple, and easy to customiz
 
 SnapCSS is a small CSS framework that provides basic styling for HTML elements and utility classes for common tasks. It's built with Sass, so you can customize colors, spacing, and other variables to match your project.
 
+[Visit Live Site](https://shre0032.github.io/SnapCSS/)
+
 ## Installation
 
 1. Download or clone this repository
