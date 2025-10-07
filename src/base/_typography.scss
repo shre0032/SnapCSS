@@ -1,0 +1,151 @@
+@use '../variables' as vars;
+@use 'sass:color';
+
+// Base body typography
+body {
+    font-family: vars.$font-primary;
+    font-size: vars.$text-base;
+    font-weight: vars.$weight-normal;
+    line-height: 1.6;
+    color: vars.$gray-900;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+    font-weight: vars.$weight-bold;
+    line-height: 1.2;
+    margin-bottom: vars.$space-4;
+    color: vars.$dark;
+}
+
+h1 {
+    font-size: vars.$text-5xl;
+    letter-spacing: -0.025em;
+}
+
+h2 {
+    font-size: vars.$text-4xl;
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    font-size: vars.$text-3xl;
+}
+
+h4 {
+    font-size: vars.$text-2xl;
+}
+
+h5 {
+    font-size: vars.$text-xl;
+}
+
+h6 {
+    font-size: vars.$text-lg;
+}
+
+// Paragraphs
+p {
+    margin-bottom: vars.$space-4;
+    line-height: 1.7;
+}
+
+// Links
+a {
+    color: vars.$primary;
+    text-decoration: none;
+    transition: color vars.$transition-fast;
+
+    &:hover {
+        color: color.scale(vars.$primary, $lightness: -15%);
+        text-decoration: underline;
+    }
+}
+
+// Lists
+ul, ol {
+    margin-bottom: vars.$space-4;
+    padding-left: vars.$space-6;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin-bottom: vars.$space-2;
+}
+
+// Nested lists
+ul ul, ol ul {
+    list-style-type: circle;
+    margin-top: vars.$space-2;
+}
+
+ol ol, ul ol {
+    list-style-type: lower-alpha;
+    margin-top: vars.$space-2;
+}
+
+// Blockquote
+blockquote {
+    padding: vars.$space-4 vars.$space-6;
+    margin: vars.$space-6 0;
+    border-left: 4px solid vars.$primary;
+    background-color: vars.$gray-50;
+    font-style: italic;
+    color: vars.$gray-700;
+}
+
+// Code and preformatted text
+code {
+    font-family: vars.$font-mono;
+    font-size: 0.875em;
+    padding: vars.$space-1 vars.$space-2;
+    background-color: vars.$gray-100;
+    border-radius: vars.$radius-base;
+    color: vars.$danger;
+}
+
+pre {
+    font-family: vars.$font-mono;
+    font-size: vars.$text-sm;
+    padding: vars.$space-4;
+    background-color: vars.$gray-800;
+    color: vars.$gray-100;
+    border-radius: vars.$radius-md;
+    overflow-x: auto;
+    margin-bottom: vars.$space-4;
+
+    code {
+        background: none;
+        padding: 0;
+        color: inherit;
+    }
+}
+
+// Emphasis and strong
+strong, b {
+    font-weight: vars.$weight-bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+// Small text
+small {
+    font-size: vars.$text-sm;
+}
+
+// Horizontal rule
+hr {
+    border: 0;
+    height: 1px;
+    background-color: vars.$gray-300;
+    margin: vars.$space-8 0;
+}

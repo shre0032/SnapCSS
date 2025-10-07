@@ -1,0 +1,98 @@
+@use '../variables' as vars;
+
+// Border width utilities
+.border {
+    border: 1px solid vars.$gray-300;
+}
+
+.border-0 {
+    border: 0;
+}
+
+.border-2 {
+    border-width: 2px;
+}
+
+.border-4 {
+    border-width: 4px;
+}
+
+// Border side utilities
+.border-t {
+    border-top: 1px solid vars.$gray-300;
+}
+
+.border-r {
+    border-right: 1px solid vars.$gray-300;
+}
+
+.border-b {
+    border-bottom: 1px solid vars.$gray-300;
+}
+
+.border-l {
+    border-left: 1px solid vars.$gray-300;
+}
+
+// Border radius utilities
+$radius-values: (
+    'sm': vars.$radius-sm,
+    'base': vars.$radius-base,
+    'md': vars.$radius-md,
+    'lg': vars.$radius-lg,
+    'xl': vars.$radius-xl,
+    '2xl': vars.$radius-2xl,
+    'full': vars.$radius-full
+);
+
+@each $name, $value in $radius-values {
+    .rounded-#{$name} {
+        border-radius: $value;
+    }
+}
+
+.rounded {
+    border-radius: vars.$radius-base;
+}
+
+.rounded-none {
+    border-radius: 0;
+}
+
+// Corner-specific border radius
+.rounded-t {
+    border-top-left-radius: vars.$radius-base;
+    border-top-right-radius: vars.$radius-base;
+}
+
+.rounded-r {
+    border-top-right-radius: vars.$radius-base;
+    border-bottom-right-radius: vars.$radius-base;
+}
+
+.rounded-b {
+    border-bottom-left-radius: vars.$radius-base;
+    border-bottom-right-radius: vars.$radius-base;
+}
+
+.rounded-l {
+    border-top-left-radius: vars.$radius-base;
+    border-bottom-left-radius: vars.$radius-base;
+}
+
+// Border style utilities
+.border-solid {
+    border-style: solid;
+}
+
+.border-dashed {
+    border-style: dashed;
+}
+
+.border-dotted {
+    border-style: dotted;
+}
+
+.border-none {
+    border-style: none;
+}

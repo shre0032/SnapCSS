@@ -1,0 +1,149 @@
+@use '../variables' as vars;
+@use 'sass:color';
+
+// Button base mixin for common styles
+@mixin button-base {
+    display: inline-block;
+    padding: vars.$space-3 vars.$space-6;
+    font-size: vars.$text-base;
+    font-weight: vars.$weight-medium;
+    line-height: 1.5;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: vars.$radius-md;
+    cursor: pointer;
+    transition: all vars.$transition-base;
+    text-decoration: none;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+// Button color variant mixin
+@mixin button-variant($bg-color, $text-color: vars.$white) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-color: $bg-color;
+
+    &:hover:not(:disabled) {
+        background-color: color.scale($bg-color, $lightness: -12%);
+        border-color: color.scale($bg-color, $lightness: -12%);
+        transform: translateY(-1px);
+        box-shadow: vars.$shadow-md;
+    }
+
+    &:active:not(:disabled) {
+        transform: translateY(0);
+        box-shadow: vars.$shadow-sm;
+    }
+}
+
+// Outline button variant mixin
+@mixin button-outline($color) {
+    background-color: transparent;
+    color: $color;
+    border-color: $color;
+
+    &:hover:not(:disabled) {
+        background-color: $color;
+        color: vars.$white;
+        transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+        transform: translateY(0);
+    }
+}
+
+// Base button class
+.btn {
+    @include button-base;
+    @include button-variant(vars.$primary);
+}
+
+// Button color variants
+.btn-primary {
+    @include button-base;
+    @include button-variant(vars.$primary);
+}
+
+.btn-secondary {
+    @include button-base;
+    @include button-variant(vars.$secondary);
+}
+
+.btn-success {
+    @include button-base;
+    @include button-variant(vars.$success);
+}
+
+.btn-danger {
+    @include button-base;
+    @include button-variant(vars.$danger);
+}
+
+.btn-warning {
+    @include button-base;
+    @include button-variant(vars.$warning, vars.$dark);
+}
+
+.btn-info {
+    @include button-base;
+    @include button-variant(vars.$info);
+}
+
+.btn-light {
+    @include button-base;
+    @include button-variant(vars.$light, vars.$dark);
+}
+
+.btn-dark {
+    @include button-base;
+    @include button-variant(vars.$dark);
+}
+
+// Outline button variants
+.btn-outline-primary {
+    @include button-base;
+    @include button-outline(vars.$primary);
+}
+
+.btn-outline-secondary {
+    @include button-base;
+    @include button-outline(vars.$secondary);
+}
+
+.btn-outline-success {
+    @include button-base;
+    @include button-outline(vars.$success);
+}
+
+.btn-outline-danger {
+    @include button-base;
+    @include button-outline(vars.$danger);
+}
+
+// Button sizes
+.btn-sm {
+    padding: vars.$space-2 vars.$space-4;
+    font-size: vars.$text-sm;
+}
+
+.btn-lg {
+    padding: vars.$space-4 vars.$space-8;
+    font-size: vars.$text-lg;
+}
+
+// Block button
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Button group
+.btn-group {
+    display: inline-flex;
+    gap: vars.$space-2;
+}

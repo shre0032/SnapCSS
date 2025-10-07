@@ -1,0 +1,135 @@
+// SnapCSS Framework
+// A lightweight and modern CSS framework built with Sass
+
+// Variables 
+@use 'variables';
+
+// Base styles
+@use 'base/reset';
+@use 'base/typography';
+
+// Components
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/tables';
+
+// Utilities
+@use 'utilities/colors';
+@use 'utilities/spacing';
+@use 'utilities/borders';
+
+// Additional utility classes
+
+// Display utilities
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+// Flexbox utilities
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+.align-stretch { align-items: stretch; }
+.gap-1 { gap: variables.$space-1; }
+.gap-2 { gap: variables.$space-2; }
+.gap-3 { gap: variables.$space-3; }
+.gap-4 { gap: variables.$space-4; }
+.gap-6 { gap: variables.$space-6; }
+
+// Text alignment
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+// Font weight
+.font-light { font-weight: variables.$weight-light; }
+.font-normal { font-weight: variables.$weight-normal; }
+.font-medium { font-weight: variables.$weight-medium; }
+.font-semibold { font-weight: variables.$weight-semibold; }
+.font-bold { font-weight: variables.$weight-bold; }
+.font-black { font-weight: variables.$weight-black; }
+
+// Font size
+.text-xs { font-size: variables.$text-xs; }
+.text-sm { font-size: variables.$text-sm; }
+.text-base { font-size: variables.$text-base; }
+.text-lg { font-size: variables.$text-lg; }
+.text-xl { font-size: variables.$text-xl; }
+.text-2xl { font-size: variables.$text-2xl; }
+.text-3xl { font-size: variables.$text-3xl; }
+.text-4xl { font-size: variables.$text-4xl; }
+.text-5xl { font-size: variables.$text-5xl; }
+
+// Width utilities
+.w-25 { width: 25%; }
+.w-50 { width: 50%; }
+.w-75 { width: 75%; }
+.w-100 { width: 100%; }
+.w-auto { width: auto; }
+
+// Height utilities
+.h-100 { height: 100%; }
+.h-auto { height: auto; }
+
+// Shadow utilities
+.shadow-sm { box-shadow: variables.$shadow-sm; }
+.shadow { box-shadow: variables.$shadow-base; }
+.shadow-md { box-shadow: variables.$shadow-md; }
+.shadow-lg { box-shadow: variables.$shadow-lg; }
+.shadow-xl { box-shadow: variables.$shadow-xl; }
+.shadow-none { box-shadow: none; }
+
+// Overflow utilities
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-scroll { overflow: scroll; }
+
+// Position utilities
+.position-static { position: static; }
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+.position-sticky { position: sticky; }
+
+// Container
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: variables.$space-4;
+    padding-right: variables.$space-4;
+
+    @media (min-width: variables.$breakpoint-sm) {
+        max-width: 640px;
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+        max-width: 768px;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+        max-width: 1024px;
+    }
+
+    @media (min-width: variables.$breakpoint-xl) {
+        max-width: 1280px;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    padding-left: variables.$space-4;
+    padding-right: variables.$space-4;
+}

@@ -1,0 +1,224 @@
+@use '../variables' as vars;
+
+// Form group container
+.form-group {
+    margin-bottom: vars.$space-5;
+}
+
+// Labels
+label {
+    display: inline-block;
+    margin-bottom: vars.$space-2;
+    font-weight: vars.$weight-medium;
+    color: vars.$gray-700;
+    font-size: vars.$text-sm;
+}
+
+// Base input styles
+@mixin input-base {
+    display: block;
+    width: 100%;
+    padding: vars.$space-3 vars.$space-4;
+    font-size: vars.$text-base;
+    line-height: 1.5;
+    color: vars.$gray-900;
+    background-color: vars.$white;
+    border: 1px solid vars.$gray-300;
+    border-radius: vars.$radius-md;
+    transition: border-color vars.$transition-fast, box-shadow vars.$transition-fast;
+
+    &:focus {
+        outline: none;
+        border-color: vars.$primary;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    &:disabled {
+        background-color: vars.$gray-100;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    &::placeholder {
+        color: vars.$gray-400;
+    }
+}
+
+// Text inputs
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+    @include input-base;
+}
+
+// Textarea
+textarea {
+    @include input-base;
+    resize: vertical;
+    min-height: 100px;
+}
+
+// Select
+select {
+    @include input-base;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right vars.$space-3 center;
+    padding-right: vars.$space-8;
+}
+
+// Checkboxes and radio buttons
+input[type="checkbox"],
+input[type="radio"] {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: vars.$space-2;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+// Checkbox and radio containers
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: vars.$space-3;
+
+    input {
+        margin-top: 0;
+    }
+
+    label {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+}
+
+// Input sizes
+.input-sm {
+    padding: vars.$space-2 vars.$space-3;
+    font-size: vars.$text-sm;
+}
+
+.input-lg {
+    padding: vars.$space-4 vars.$space-5;
+    font-size: vars.$text-lg;
+}
+
+// Input states
+.input-success {
+    border-color: vars.$success;
+
+    &:focus {
+        border-color: vars.$success;
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    }
+}
+
+.input-error {
+    border-color: vars.$danger;
+
+    &:focus {
+        border-color: vars.$danger;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    }
+}
+
+.input-warning {
+    border-color: vars.$warning;
+
+    &:focus {
+        border-color: vars.$warning;
+        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    }
+}
+
+// Help text
+.form-text {
+    display: block;
+    margin-top: vars.$space-2;
+    font-size: vars.$text-sm;
+    color: vars.$gray-600;
+}
+
+// Error text
+.form-error {
+    display: block;
+    margin-top: vars.$space-2;
+    font-size: vars.$text-sm;
+    color: vars.$danger;
+}
+
+// Success text
+.form-success {
+    display: block;
+    margin-top: vars.$space-2;
+    font-size: vars.$text-sm;
+    color: vars.$success;
+}
+
+// Fieldset styling
+fieldset {
+    padding: vars.$space-5;
+    border: 1px solid vars.$gray-300;
+    border-radius: vars.$radius-md;
+    margin-bottom: vars.$space-6;
+}
+
+legend {
+    padding: 0 vars.$space-3;
+    font-weight: vars.$weight-semibold;
+    font-size: vars.$text-lg;
+    color: vars.$gray-900;
+}
+
+// Input group for addons
+.input-group {
+    display: flex;
+    width: 100%;
+
+    input {
+        flex: 1;
+        border-radius: 0;
+
+        &:first-child {
+            border-top-left-radius: vars.$radius-md;
+            border-bottom-left-radius: vars.$radius-md;
+        }
+
+        &:last-child {
+            border-top-right-radius: vars.$radius-md;
+            border-bottom-right-radius: vars.$radius-md;
+        }
+    }
+
+    .input-addon {
+        display: flex;
+        align-items: center;
+        padding: vars.$space-3 vars.$space-4;
+        background-color: vars.$gray-100;
+        border: 1px solid vars.$gray-300;
+        color: vars.$gray-700;
+        font-size: vars.$text-sm;
+
+        &:first-child {
+            border-top-left-radius: vars.$radius-md;
+            border-bottom-left-radius: vars.$radius-md;
+            border-right: 0;
+        }
+
+        &:last-child {
+            border-top-right-radius: vars.$radius-md;
+            border-bottom-right-radius: vars.$radius-md;
+            border-left: 0;
+        }
+    }
+}

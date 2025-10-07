@@ -1,0 +1,13 @@
+{
+  "name": "snapcss",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "sass:watch": "sass --watch src/main.scss css/snapcss.css",
+    "sass:build": "sass src/main.scss css/snapcss.css --style compressed"
+  },
+  "keywords": ["css", "framework", "sass"],
+  "author": "Sudip Shrestha",
+  "license": "MIT",
+  "description": "A lightweight CSS framework built with Sass for rapid web development"
+}

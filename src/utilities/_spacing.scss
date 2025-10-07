@@ -1,0 +1,128 @@
+@use '../variables' as vars;
+
+// Spacing values map
+$spacing: (
+    '0': vars.$space-0,
+    '1': vars.$space-1,
+    '2': vars.$space-2,
+    '3': vars.$space-3,
+    '4': vars.$space-4,
+    '5': vars.$space-5,
+    '6': vars.$space-6,
+    '8': vars.$space-8,
+    '10': vars.$space-10,
+    '12': vars.$space-12,
+    '16': vars.$space-16,
+    '20': vars.$space-20
+);
+
+// Generate margin utilities
+@each $name, $value in $spacing {
+    // Margin all sides
+    .m-#{$name} {
+        margin: $value;
+    }
+
+    // Margin top
+    .mt-#{$name} {
+        margin-top: $value;
+    }
+
+    // Margin right
+    .mr-#{$name} {
+        margin-right: $value;
+    }
+
+    // Margin bottom
+    .mb-#{$name} {
+        margin-bottom: $value;
+    }
+
+    // Margin left
+    .ml-#{$name} {
+        margin-left: $value;
+    }
+
+    // Margin horizontal (left and right)
+    .mx-#{$name} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    // Margin vertical (top and bottom)
+    .my-#{$name} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+}
+
+// Generate padding utilities
+@each $name, $value in $spacing {
+    // Padding all sides
+    .p-#{$name} {
+        padding: $value;
+    }
+
+    // Padding top
+    .pt-#{$name} {
+        padding-top: $value;
+    }
+
+    // Padding right
+    .pr-#{$name} {
+        padding-right: $value;
+    }
+
+    // Padding bottom
+    .pb-#{$name} {
+        padding-bottom: $value;
+    }
+
+    // Padding left
+    .pl-#{$name} {
+        padding-left: $value;
+    }
+
+    // Padding horizontal (left and right)
+    .px-#{$name} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    // Padding vertical (top and bottom)
+    .py-#{$name} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+}
+
+// Auto margin utilities
+.m-auto {
+    margin: auto;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.mb-auto {
+    margin-bottom: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}

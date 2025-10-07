@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapCSS Framework - Demo</title>
+    <link rel="stylesheet" href="./css/snapcss.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="my-8">
+            <h1 class="text-primary mb-4">SnapCSS Framework</h1>
+            <p class="text-lg text-gray-600">A lightweight and modern CSS framework built with Sass for rapid web development.</p>
+        </header>
+
+        <!-- Typography Section -->
+        <section class="mb-12">
+            <h2 class="mb-4">Typography</h2>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>This is a regular paragraph with <strong>bold text</strong> and <em>italic text</em>. You can also use <code>inline code</code> for technical terms.</p>
+            <blockquote>
+                This is a blockquote. It can be used for important quotes or callouts in your content.
+            </blockquote>
+        </section>
+
+        <!-- Lists Section -->
+        <section class="mb-12">
+            <h2 class="mb-4">Lists</h2>
+            <div class="d-flex gap-6">
+                <div>
+                    <h4>Unordered List</h4>
+                    <ul>
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item
+                            <ul>
+                                <li>Nested item</li>
+                                <li>Another nested item</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Ordered List</h4>
+                    <ol>
+                        <li>First step</li>
+                        <li>Second step</li>
+                        <li>Third step</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section class="mb-12">
+            <h2 class="mb-4">Buttons</h2>
+            <div class="mb-4">
+                <h4 class="mb-3">Standard Buttons</h4>
+                <div class="btn-group mb-3">
+                    <button class="btn-primary">Primary</button>
+                    <button class="btn-secondary">Secondary</button>
+                    <button class="btn-success">Success</button>
+                    <button class="btn-danger">Danger</button>
+                    <button class="btn-warning">Warning</button>
+                    <button class="btn-info">Info</button>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="mb-3">Outline Buttons</h4>
+                <div class="btn-group mb-3">
+                    <button class="btn-outline-primary">Primary</button>
+                    <button class="btn-outline-secondary">Secondary</button>
+                    <button class="btn-outline-success">Success</button>
+                    <button class="btn-outline-danger">Danger</button>
+                </div>
+            </div>
+            <div>
+                <h4 class="mb-3">Button Sizes</h4>
+                <div class="btn-group">
+                    <button class="btn-primary btn-sm">Small</button>
+                    <button class="btn-primary">Default</button>
+                    <button class="btn-primary btn-lg">Large</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section class="mb-12">
+            <h2 class="mb-4">Forms</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <span class="form-text">Please enter your full name.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="you@example.com" class="input-success">
+                    <span class="form-success">Email format is valid.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" class="input-error">
+                    <span class="form-error">Password must be at least 8 characters.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <option>Select a country</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>United Kingdom</option>
+                        <option>Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" name="subscription" id="free">
+                    <label for="free">Free Plan</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" name="subscription" id="premium">
+                    <label for="premium">Premium Plan</label>
+                </div>
+
+                <button type="submit" class="btn-primary mt-4">Submit Form</button>
+            </form>
+        </section>
+
+        <!-- Tables Section -->
+        <section class="mb-12">
+            <h2 class="mb-4">Tables</h2>
+            
+            <h4 class="mb-3">Basic Table</h4>
+            <table class="mb-6">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Developer</td>
+                        <td><span class="bg-success text-white px-3 py-1 rounded">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>Designer</td>
+                        <td><span class="bg-warning text-dark px-3 py-1 rounded">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Bob Johnson</td>
+                        <td>bob@example.com</td>
+                        <td>Manager</td>
+                        <td><span class="bg-success text-white px-3 py-1 rounded">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="mb-3">Striped Table with Hover</h4>
+            <table class="table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>$999.00</td>
+                        <td>2</td>
+                        <td>$1,998.00</td>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>$29.99</td>
+                        <td>5</td>
+                        <td>$149.95</td>
+                    </tr>
+                    <tr>
+                        <td>Keyboard</td>
+                        <td>$79.99</td>
+                        <td>3</td>
+                        <td>$239.97</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td>$2,387.92</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Utility Classes Section -->
+        <section class="mb-12">
+            <h2 class="mb-4">Utility Classes</h2>
+            
+            <h4 class="mb-3">Background Colors</h4>
+            <div class="d-flex gap-3 mb-6">
+                <div class="bg-primary text-white p-4 rounded">Primary</div>
+                <div class="bg-success text-white p-4 rounded">Success</div>
+                <div class="bg-danger text-white p-4 rounded">Danger</div>
+                <div class="bg-warning text-dark p-4 rounded">Warning</div>
+                <div class="bg-info text-white p-4 rounded">Info</div>
+            </div>
+
+            <h4 class="mb-3">Spacing Utilities</h4>
+            <div class="bg-light p-4 rounded mb-6">
+                <div class="bg-primary text-white p-3 mb-2">Padding 3</div>
+                <div class="bg-secondary text-white p-4 mb-3">Padding 4</div>
+                <div class="bg-success text-white p-6">Padding 6</div>
+            </div>
+
+            <h4 class="mb-3">Border Utilities</h4>
+            <div class="d-flex gap-4 mb-6">
+                <div class="border p-4">Default Border</div>
+                <div class="border-2 border-primary p-4 rounded-lg">Rounded Border</div>
+                <div class="border border-dashed border-danger p-4 rounded-full">Dashed Full Radius</div>
+            </div>
+
+            <h4 class="mb-3">Shadow Utilities</h4>
+            <div class="d-flex gap-4 mb-6">
+                <div class="shadow p-4 bg-white">Small Shadow</div>
+                <div class="shadow-md p-4 bg-white">Medium Shadow</div>
+                <div class="shadow-lg p-4 bg-white">Large Shadow</div>
+            </div>
+
+            <h4 class="mb-3">Flexbox Layout</h4>
+            <div class="d-flex justify-between align-center bg-light p-4 rounded mb-3">
+                <div class="bg-primary text-white p-3 rounded">Item 1</div>
+                <div class="bg-secondary text-white p-3 rounded">Item 2</div>
+                <div class="bg-success text-white p-3 rounded">Item 3</div>
+            </div>
+
+            <div class="d-flex justify-center gap-3 bg-light p-4 rounded">
+                <div class="bg-danger text-white p-3 rounded">Centered</div>
+                <div class="bg-warning text-dark p-3 rounded">Items</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 border-t mt-12">
+            <p class="text-gray-600">SnapCSS Framework - Built with Sass</p>
+            <p class="text-sm text-gray-500 mt-2">A lightweight CSS framework for modern web development</p>
+        </footer>
+    </div>
+</body>
+</html>

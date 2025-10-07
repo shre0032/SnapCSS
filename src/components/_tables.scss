@@ -1,0 +1,148 @@
+@use '../variables' as vars;
+
+// Base table styles
+table {
+    width: 100%;
+    margin-bottom: vars.$space-6;
+    border-collapse: collapse;
+    background-color: vars.$white;
+}
+
+// Table headers
+thead {
+    background-color: vars.$gray-100;
+    border-bottom: 2px solid vars.$gray-300;
+}
+
+th {
+    padding: vars.$space-4;
+    text-align: left;
+    font-weight: vars.$weight-semibold;
+    color: vars.$gray-900;
+    font-size: vars.$text-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+// Table body
+tbody {
+    tr {
+        border-bottom: 1px solid vars.$gray-200;
+        transition: background-color vars.$transition-fast;
+
+        &:hover {
+            background-color: vars.$gray-50;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+td {
+    padding: vars.$space-4;
+    color: vars.$gray-700;
+}
+
+// Table footer
+tfoot {
+    background-color: vars.$gray-50;
+    border-top: 2px solid vars.$gray-300;
+    font-weight: vars.$weight-medium;
+}
+
+// Bordered table
+.table-bordered {
+    border: 1px solid vars.$gray-300;
+
+    th,
+    td {
+        border: 1px solid vars.$gray-300;
+    }
+}
+
+// Striped table
+.table-striped {
+    tbody tr:nth-child(odd) {
+        background-color: vars.$gray-50;
+    }
+}
+
+// Compact table
+.table-compact {
+    th,
+    td {
+        padding: vars.$space-2 vars.$space-3;
+    }
+}
+
+// Table with hover effect
+.table-hover {
+    tbody tr {
+        cursor: pointer;
+
+        &:hover {
+            background-color: vars.$gray-100;
+        }
+    }
+}
+
+// Responsive table wrapper
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: vars.$space-6;
+
+    table {
+        margin-bottom: 0;
+        min-width: 600px;
+    }
+}
+
+// Table variants - different background colors
+.table-primary {
+    thead {
+        background-color: vars.$primary;
+        color: vars.$white;
+
+        th {
+            color: vars.$white;
+        }
+    }
+}
+
+.table-dark {
+    background-color: vars.$gray-800;
+    color: vars.$white;
+
+    thead {
+        background-color: vars.$gray-900;
+        border-bottom-color: vars.$gray-700;
+
+        th {
+            color: vars.$white;
+        }
+    }
+
+    tbody tr {
+        border-bottom-color: vars.$gray-700;
+
+        &:hover {
+            background-color: vars.$gray-700;
+        }
+    }
+
+    td {
+        color: vars.$gray-100;
+    }
+}
+
+// Caption styling
+caption {
+    padding: vars.$space-3;
+    color: vars.$gray-600;
+    text-align: left;
+    caption-side: bottom;
+    font-size: vars.$text-sm;
+}
